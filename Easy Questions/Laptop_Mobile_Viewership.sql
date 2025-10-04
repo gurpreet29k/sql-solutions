@@ -1,4 +1,4 @@
 SELECT 
-  SUM(CASE WHEN device_type = 'laptop' then 1 else 0 end) laptop_views,
-  SUM(CASE WHEN device_type in ('phone','tablet') then 1 else 0 end) mobile_views
+  SUM(CASE WHEN device_type = 'laptop' THEN 1 ELSE 0 END) laptop_views,
+  SUM(CASE WHEN device_type in ('phone','tablet') THEN 1 ELSE 0 END) mobile_views
 FROM viewership
