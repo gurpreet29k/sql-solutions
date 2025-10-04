@@ -1,4 +1,6 @@
-with yearly_spend_cte as(
+--Problem: https://datalemur.com/questions/yoy-growth-rate
+
+WITH yearly_spend_cte as(
 SELECT 
   extract(year from transaction_date) as year,
   product_id,
