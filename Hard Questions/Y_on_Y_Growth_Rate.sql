@@ -1,4 +1,6 @@
-with yearly_spend_cte as(
+--Problem- https://datalemur.com/questions/yoy-growth-rate
+
+WITH yearly_spend_cte as(
 SELECT 
   extract(year from transaction_date) as year,
   product_id,
@@ -10,9 +12,9 @@ SELECT
 FROM user_transactions
 )
  
-Select *,
+SELECT *,
  round(100 * (curr_year_spend - prev_year_return) / prev_year_return,2) as yoy_return
-from yearly_spend_cte
+FROM yearly_spend_cte
 
 
 /*
