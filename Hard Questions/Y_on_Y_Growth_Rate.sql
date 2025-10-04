@@ -1,4 +1,4 @@
---Problem: https://datalemur.com/questions/yoy-growth-rate
+--Problem- https://datalemur.com/questions/yoy-growth-rate
 
 WITH yearly_spend_cte as(
 SELECT 
@@ -12,9 +12,9 @@ SELECT
 FROM user_transactions
 )
  
-Select *,
+SELECT *,
  round(100 * (curr_year_spend - prev_year_return) / prev_year_return,2) as yoy_return
-from yearly_spend_cte
+FROM yearly_spend_cte
 
 
 /*
