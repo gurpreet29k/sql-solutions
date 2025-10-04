@@ -1,5 +1,7 @@
-with cte AS(
-Select 
+--Problem- https://datalemur.com/questions/time-spent-snaps
+
+WITH cte AS(
+SELECT 
     age.age_bucket,
     SUM(CASE WHEN act.activity_type = 'send'
         THEN act.time_spent else 0 end) as send_timespent,
@@ -17,4 +19,4 @@ SELECT
     age_bucket,
     round(100 * send_timespent/total_timespent,2) as send_perc,
     round(100 * open_timespent/total_timespent,2) as open_perc
-from cte
+FROM cte
