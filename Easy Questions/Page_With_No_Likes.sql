@@ -1,6 +1,6 @@
-SELECT p.page_id FROM 
-pages p
-left join page_likes pl 
-on p.page_id = pl.page_id
-where user_id is NULL
-order by p.page_id;
+SELECT p.page_id 
+FROM pages p
+LEFT JOIN page_likes pl 
+ON p.page_id = pl.page_id
+WHERE user_id is NULL
+ORDER BY p.page_id;
